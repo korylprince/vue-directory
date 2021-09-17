@@ -81,7 +81,7 @@ export default {
     data() {
         return {
             loading: true,
-            itemCount: 10,
+            itemCount: 5,
             search: "",
             directory: [],
         }
