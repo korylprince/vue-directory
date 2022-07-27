@@ -22,9 +22,7 @@
 
                     <template #default="props">
                         <div v-for="(item, idx) in props.items" :key="idx" class="directory-item">
-                            <v-avatar v-if="item.photo_url" size="96" class="directory-photo">
-                                <v-img :src="item.photo_url" />
-                            </v-avatar>
+                            <img v-if="item.photo_url" class="directory-photo" :src="item.photo_url">
 
                             <v-avatar v-else size="96" class="directory-photo" color="primary">
                                 <v-icon dark size="90">
@@ -148,6 +146,11 @@ div[data-vuetify]
             border-color: #aaa
             border: 0
             height: 1px
+        img.directory-photo
+            width: 96px
+            clip-path: circle()
+            margin-top: -10px
+            margin-bottom: -10px
         .directory-photo
             grid-column: 1
             grid-row: 1
