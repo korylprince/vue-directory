@@ -8,7 +8,7 @@ import App from "./app.vue"
 
 Vue.use(Vuetify)
 
-export default function directory_init(selector, url) {
+export default function directory_init(selector, url, building) {
     new Vue({
         vuetify: new Vuetify({
             theme: {
@@ -22,7 +22,7 @@ export default function directory_init(selector, url) {
                 },
             },
         }),
-        render: h => h(App, {props: {directoryUrl: url}}),
+        render: h => h(App, {props: {directoryUrl: url, filterBuilding: building}}),
     }).$mount(selector)
 }
 

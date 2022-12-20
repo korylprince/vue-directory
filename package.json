@@ -1,6 +1,6 @@
 {
   "name": "vue-directory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Searchable school staff directory",
   "author": "Kory Prince <korylprince@gmail.com>",
   "scripts": {

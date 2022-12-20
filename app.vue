@@ -75,6 +75,10 @@ export default {
             type: String,
             required: true,
         },
+        filterBuilding: {
+            type: String,
+            default: "",
+        },
     },
     data() {
         return {
@@ -86,6 +90,15 @@ export default {
     },
     computed: {
         building() {
+            if (this.filterBuilding != null && this.filterBuilding !== "") {
+                return this.filterBuilding
+            }
+            if (this.query_building != null && this.query_building !== "") {
+                return this.query_building
+            }
+            return null
+        },
+        query_building() {
             return (new URLSearchParams(window.location.search)).get("building")
         },
         filtered() {
